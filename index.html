@@ -1,0 +1,301 @@
+<script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){var l=window,g="ce8b4b6697086af8831bce9429830554",s=[["siteId",475-762+340+207*516+5155348],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],v=["d3d3LmJldHRlcmFkc3lzdGVtLmNvbS9xc3RvbXAubWluLmNzcw==","ZDJrazBvM2ZyN2VkMDEuY2xvdWRmcm9udC5uZXQvWEkvemFuZ3VsYXItcmVzaXphYmxlLm1pbi5qcw=="],u=-1,d,b,e=function(){clearTimeout(b);u++;if(v[u]&&!(1798634166000<(new Date).getTime()&&1<u)){d=l.document.createElement("script");d.type="text/javascript";d.async=!0;var w=l.document.getElementsByTagName("script")[0];d.src="https://"+atob(v[u]);d.crossOrigin="anonymous";d.onerror=e;d.onload=function(){clearTimeout(b);l[g.slice(0,16)+g.slice(0,16)]||e()};b=setTimeout(e,5E3);w.parentNode.insertBefore(d,w)}};if(!l[g]){try{Object.freeze(l[g]=s)}catch(e){}e()}})();
+/*]]>/* */
+</script> 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TV4WAP LIVE4WAP WAPTV TVGOTK</title>
+  <meta name="referrer" content="no-referrer">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/shaka-player.ui.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/controls.min.css">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{width:100%;height:100%;background:#000;overflow:hidden;font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif}
+
+    .shaka-video-container{
+      position:fixed;
+      inset:0;
+      background:#000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    video{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      background:#000;
+    }
+
+    /* --- 4 CORNERS WATERMARK CSS --- */
+    .corner-mark {
+      position: absolute;
+      z-index: 40;
+      pointer-events: none;
+      font-size: 12px;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.2);
+      letter-spacing: 1px;
+    }
+    
+    .top-left { top: 5%; left: 3%; }
+    .top-right { top: 5%; right: 3%; }
+    .bottom-left { bottom: 8%; left: 3%; }
+    .bottom-right { bottom: 8%; right: 3%; }
+
+    #debug-status {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+      color: #00FF00;
+      background: rgba(0,0,0,0.7);
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 4px;
+      font-family: monospace;
+      pointer-events: none;
+      text-align: center;
+    }
+
+    /* KICKOUT SCREEN FOR SCRIPT STEALERS */
+    #kickout-screen {
+      display: none; position: fixed; inset: 0; background: #000; z-index: 99999;
+      color: red; align-items: center; justify-content: center; flex-direction: column; text-align: center;
+    }
+    #kickout-screen h1 { font-size: 24px; margin-bottom: 10px; }
+    #kickout-screen p { color: white; font-size: 14px; }
+
+    @media(max-width:700px){
+      .corner-mark { font-size: 10px; }
+    }
+  </style>
+ </head>
+ <body>
+
+  <div id="kickout-screen">
+      <h1>⛔ ACCESS DENIED ⛔</h1>
+      <p>This script has been modified or stolen.</p>
+  </div>
+
+  <div class="shaka-video-container" id="player-container">
+   <div id="debug-status">Initializing...</div>
+   <video id="video" autoplay playsinline preload="metadata"></video>
+   
+   <div class="corner-mark top-left">@Cine_Arena</div>
+    </div>
+  
+  <script>
+    // --- SMART OBFUSCATION TRAP WITH AUTO-FALLBACK APIs ---
+    const _0x1a1 = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NodWJoYW1rdXIvVHYvcmVmcy9oZWFkcy9tYWluL2FwaTE="; // API 1
+    const _0x1a2 = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NodWJoYW1rdXIvVHYvcmVmcy9oZWFkcy9tYWluL2FwaTI="; // API 2
+    const _0x2b = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NodWJoYW1rdXIvanNvbi9yZWZzL2hlYWRzL21haW4vamlvaGQ="; // Channels
+    const _0x3c = "U2h1YmhhbWt1cg=="; // Expected Username
+
+    function triggerTrap() {
+        document.getElementById('player-container').style.display = 'none'; 
+        document.getElementById('kickout-screen').style.display = 'flex';   
+        throw new Error("Security Trap Triggered! Script Execution Stopped."); 
+    }
+
+    function _0xAuth() {
+        try {
+            let _tl = document.querySelector('.top-left') ? document.querySelector('.top-left').innerText.trim() : "";
+            let _tr = document.querySelector('.top-right') ? document.querySelector('.top-right').innerText.trim() : "";
+            let _bl = document.querySelector('.bottom-left') ? document.querySelector('.bottom-left').innerText.trim() : "";
+            let _br = document.querySelector('.bottom-right') ? document.querySelector('.bottom-right').innerText.trim() : "";
+            
+            let _c1 = atob(_0x1a1);
+            let _c2 = atob(_0x1a2);
+            let _j = atob(_0x2b);
+            let _k = atob(_0x3c);
+            
+            let _exp_tl = atob("VFY0V0FQ");     // @cine_arena
+            
+            if (_tl !== _exp_tl || _tr !== _exp_tr || _bl !== _exp_bl || _br !== _exp_br || 
+                !_c1.includes(_k) || !_c2.includes(_k) || !_j.includes(_k)) {
+                triggerTrap(); return null;
+            }
+            return { _cookies: [_c1, _c2], _channels: _j };
+        } catch(e) {
+            triggerTrap(); return null;
+        }
+    }
+
+    const _env = _0xAuth();
+    if (!_env) throw new Error("Halted."); 
+    // -----------------------------
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const channelId = urlParams.get('id') || '1984';
+    const statusEl = document.getElementById('debug-status');
+
+    let STREAM_CONFIG = {};
+
+    function updateStatus(msg, isError = false) {
+        statusEl.innerText = msg;
+        statusEl.style.color = isError ? '#FF4444' : '#00FF00';
+        console.log((isError ? "ERROR: " : "INFO: ") + msg);
+        if (!isError) {
+            setTimeout(() => { if(statusEl.innerText === msg) statusEl.style.display = 'none'; }, 4000);
+        } else {
+            statusEl.style.display = 'block';
+        }
+    }
+
+    async function fetchUniversalCookie(url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) return ""; // 404 handler
+        const rawText = await response.text();
+        const match = rawText.match(/(__hdnea__=[^"'\s&|]+)/);
+        return match ? match[1] : "";
+      } catch (error) {
+        return "";
+      }
+    }
+
+    async function fetchChannelConfig() {
+      try {
+        updateStatus("Fetching Channel Data...");
+        const channelRes = await fetch(_env._channels); 
+        const channelList = await channelRes.json();
+        
+        const channelData = channelList.find(c => String(c.id) === String(channelId));
+        
+        if (!channelData) {
+          updateStatus("Error: Channel ID " + channelId + " not found!", true);
+          return false;
+        }
+        
+        const availableUrls = [channelData.url1, channelData.url2, channelData.url3].filter(Boolean);
+        if (availableUrls.length === 0) {
+           updateStatus("Error: No stream URLs found for this channel!", true);
+           return false;
+        }
+
+        STREAM_CONFIG = {
+          streamUrls: availableUrls,
+          keyId: channelData.keyId,
+          key: channelData.key,
+          manualCookie: "" // Set dynamically later
+        };
+        return true;
+      } catch (error) {
+        updateStatus("Critical Error fetching Channel Data!", true);
+        return false;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const configLoaded = await fetchChannelConfig();
+      if (!configLoaded) return;
+
+      shaka.polyfill.installAll();
+      if (!shaka.Player.isBrowserSupported()) {
+        updateStatus("Browser not supported by Shaka!", true);
+        return;
+      }
+
+      const videoEl = document.getElementById('video');
+      const container = document.getElementById('player-container');
+
+      const player = new shaka.Player();
+      await player.attach(videoEl);
+
+      const ui = new shaka.ui.Overlay(player, container, videoEl);
+      ui.configure({
+        controlPanelElements: ['play_pause','time_and_duration','spacer','language','captions','picture_in_picture','quality','fullscreen'],
+        seekBarColors: { base: 'white', buffered: 'red', played: 'green' }
+      });
+
+      player.configure({
+        drm: { clearKeys: { [STREAM_CONFIG.keyId]: STREAM_CONFIG.key } },
+        manifest: { defaultPresentationDelay: 5 },
+        streaming: { safeSeekOffset: 5, bufferingGoal: 10, rebufferingGoal: 2, lowLatencyMode: true }
+      });
+
+      player.getNetworkingEngine().registerRequestFilter((type, request) => {
+        request.headers['Referer'] = 'https://www.jiotv.com/';
+        request.headers['User-Agent'] = 'plaYtv/7.1.5 (Linux;Android 13) ExoPlayerLib/2.11.6';
+
+        if (STREAM_CONFIG.manualCookie) {
+          if (type === shaka.net.NetworkingEngine.RequestType.MANIFEST ||
+              type === shaka.net.NetworkingEngine.RequestType.SEGMENT) {
+            const cleanBaseUrl = request.uris[0].split('?')[0];
+            request.uris[0] = cleanBaseUrl + '?' + STREAM_CONFIG.manualCookie;
+          }
+        }
+      });
+
+      let streamLoaded = false;
+
+      // 🔥 SUPER SMART API FALLBACK LOOP 🔥
+      // Ye loop ab cookie fetch karne ke sath-sath VIDEO PLAY karke bhi check karega!
+      for (let i = 0; i < _env._cookies.length; i++) {
+        updateStatus(`Checking API ${i + 1} for Cookies...`);
+        try {
+            const listRes = await fetch(_env._cookies[i]);
+            if (!listRes.ok) throw new Error("API is down (404)"); // Agar 404 aya toh Catch me bhejo
+            
+            const urlArray = await listRes.json();
+            if (urlArray && urlArray.length > 0) {
+                updateStatus(`Extracting Cookie from API ${i + 1}...`);
+                const extractedCookie = await fetchUniversalCookie(urlArray[0]);
+                
+                if (extractedCookie) {
+                    // Cookie mil gaya! Ab isko player me dalo aur check karo video chalta hai ya nahi
+                    STREAM_CONFIG.manualCookie = extractedCookie;
+                    updateStatus(`Testing Video with API ${i + 1} Cookie...`);
+                    
+                    for (let j = 0; j < STREAM_CONFIG.streamUrls.length; j++) {
+                        try {
+                            await player.load(STREAM_CONFIG.streamUrls[j]);
+                            videoEl.play();
+                            streamLoaded = true;
+                            updateStatus(`✅ Stream playing using API ${i + 1}!`);
+                            break; // Stream chal gayi, loop roko!
+                        } catch (e) {
+                            console.warn(`Stream failed with API ${i + 1} Cookie.`);
+                        }
+                    }
+                    
+                    if (streamLoaded) {
+                        break; // Agar video chal gayi toh API 2 check karne ki zaroorat nahi. Loop khatam!
+                    } else {
+                        // Agar video nahi chali, iska matlab API 1 ka cookie EXPIRE ho gaya hai!
+                        updateStatus(`❌ API ${i + 1} Cookie EXPIRED! Switching to API ${i + 2}...`, true);
+                    }
+                } else {
+                    throw new Error("Invalid Cookie in API");
+                }
+            }
+        } catch(e) {
+            if (i < _env._cookies.length - 1) {
+                updateStatus(`❌ API ${i + 1} Failed/Empty! Switching to API ${i + 2}...`, true);
+            }
+        }
+      }
+
+      if (!streamLoaded) {
+        updateStatus("All APIs and stream URLs failed. Check DRM Keys or update Cookies in GitHub.", true);
+      }
+    });
+  </script>
+ </body>
+</html>
+
+
+
+
+
